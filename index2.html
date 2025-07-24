@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Patients Records - BONSU CLINIC</title>
+  <link rel="stylesheet" href="/patients/styles2.css" />
+</head>
+<body>
+  <header>
+    <h1>BONSU COMMUNITY CLINIC </h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index2.html">Patients</a></li>
+        <li><a href="index3.html">DrugBox</a></li>
+        <li><a href="index4.html">Disease Info</a></li>
+        <li><a href="index5.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="patient-form">
+      <h2>Enter New Patient Record</h2>
+      <form id="patientForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" required />
+
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+          <option value="">Select</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="condition">Medical Condition:</label>
+        <input type="text" id="condition" required />
+
+        <button type="submit">Add Patient</button>
+      </form>
+    </section>
+
+    <section class="patient-records">
+      <h2>Patient Records</h2>
+      <label for="searchInput"><strong>Search by Name:</strong></label>
+<input type="text" id="searchInput" placeholder="Type patient name..." />
+<button onclick="exportPatients()">Export / Print Records</button>
+      <table id="recordsTable">
+        <thead>
+          <tr>
+            <th>Full Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Condition</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Records will be inserted here using JS -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bonsu Community Clinic</p>
+  </footer>
+
+  <!-- JS will be added soon -->
+  <script src="/patients/script2.js"></script>
+</body>
+</html>
